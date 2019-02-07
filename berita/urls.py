@@ -19,7 +19,7 @@ from . import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-   # url(r'^berita/', views.news),
+   	#url(r'^berita/', views.news),
     url(r'^berita/(?P<judul>[\w-]+)', views.berita, name='judul'),
     url(r'^$', views.index),
 ]

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ini PR | Berita</title>
+</head>
+<body>
+	<ul>
+		
+		{# Template Tags #}
+
+		{% for link, name in nav %}
+			
+			<li>
+				<a href="{{link}}">{{name}}</a>
+			</li>
+
+		{% endfor %}
+
+	</ul>
+	<h1>Halaman ini berisi berita terbaru dan rekomendasi berita</h1>
+
+</body>
+</html>
