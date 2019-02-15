@@ -4,27 +4,10 @@ from django.http import HttpResponse
 from . import views
 
 def index(request):
-	 #return HttpResponse("Halaman ini berisi berita terbaru dan rekomendasi berita")
-	data = {
-	'nav' : [
-			['/', 'Home'],
-			['/berita', 'Berita'],
-			['/kategori', 'Kategori'],
-		]
-	}
-	return render(request, 'home/index.html', data)
+	return HttpResponse('<h1>Selamat Datang di Home</h1>')
 
+def berita(request):
+	return HttpResponse('<h1>Silahkan Masukan Kategori Via URL</h1>')
 
-def berita(request, judul):
-	data = {
-	'nama' : judul,
-	'nav' : [
-			['/', 'Home'],
-			['/berita', 'Berita'],
-			['/kategori', 'Kategori'],
-		]
-	}
-	return render(request, 'pr/index.html', data)
-
-#def news(request):
-	#return HttpResponse("jika ingin berita sesuai kategori masukan jenis kategori di url sesuai keinginan anda!")
+def kategori(request, judul):
+	return HttpResponse("Ini adalah kategori berita %s." % judul)	
